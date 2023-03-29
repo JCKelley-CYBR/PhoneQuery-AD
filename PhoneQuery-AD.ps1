@@ -31,7 +31,7 @@ Invoke-Command -ScriptBlock {
         $data = New-Object System.Object
         $data | Add-Member -MemberType NoteProperty -Name "Recipient_Number" -Value $recipient
         $data | ADD-Member -MemberType NoteProperty -Name "Recipient_Name" -Value $recipientAD.Name
-        $data | Add-Member -MemberType NoteProperty -Name "Recipient_ZID" -Value $recipientAD.SamAccountName
+        $data | Add-Member -MemberType NoteProperty -Name "Recipient_UID" -Value $recipientAD.SamAccountName
         $data | Add-Member -MemberType NoteProperty -Name "Recipient_Phone" -Value $recipientAD.telephoneNumber
         $data | Add-Member -MemberType NoteProperty -Name "Recipient_Title" -Value $recipientAD.title
         $data | Add-Member -MemberType NoteProperty -Name "Recipient_Company" -Value $recipientAD.Company
